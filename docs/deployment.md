@@ -1,5 +1,7 @@
 # Public demo deployment
 
+Verified live application: **https://finn-enam-praveen.onrender.com**. See `docs/validation.md` for the hosted HTTP and mobile-viewport browser checks. The following configuration also supports deployment into another Render account.
+
 The root `Dockerfile` is the submission deployment. It builds the Next.js App Router frontend as a static export, then serves it alongside the real FastAPI API in a single Python container. There is no frontend API mock or browser-only substitute. A single external URL handles the page, JavaScript assets, `/api/*`, `/docs` and `/health`.
 
 `NEXT_PUBLIC_API_URL=/` is embedded during the image build. The frontend removes the trailing slash, giving same-origin `/api/*` requests. Local development still defaults to `http://localhost:8000`. The ordinary Next.js server build and the original two-container compose setup remain available.

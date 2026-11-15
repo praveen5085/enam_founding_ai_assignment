@@ -1,5 +1,7 @@
 # FINN
 
+[Live application](https://finn-enam-praveen.onrender.com) · [Public GitHub repository](https://github.com/praveen5085/enam_founding_ai_assignment)
+
 A mobile-first investment intelligence workbench for the ENAM Founding AI Engineer challenge. Feed joins prioritized filings and configurable market signals. Research compares guidance with reported delivery using primary documents. Network adds explicit relationship paths and contextual search.
 
 ## Run on Windows PowerShell
