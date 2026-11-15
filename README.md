@@ -52,6 +52,8 @@ With a key, CFO enrichment extracts source-validated biographical facts; provide
 
 ## Configuration and deployment
 
+For a single public application URL, use the root `Dockerfile` and `render.yaml`: the static Next.js export and FastAPI API share one host. See [deployment instructions](docs/deployment.md). A real hosting-account connection is required to create the service; a configuration file or Git push alone is not a deployed application.
+
 `backend/.env.example` documents `OPENAI_API_KEY`, extraction/synthesis models and `ALLOWED_ORIGINS`. `frontend/.env.example` documents `NEXT_PUBLIC_API_URL`. Origins are read using `os.getenv("ALLOWED_ORIGINS", "*").split(",")`; use comma-separated exact origins without spaces. CORS is not authentication.
 
 For deployment set `ALLOWED_ORIGINS=https://your-frontend.example` and build the frontend with `NEXT_PUBLIC_API_URL=https://your-api.example`. This public variable is embedded at build time. Never put keys in frontend build args. Terminate TLS at your platform ingress. Configure backend command `uvicorn backend.main:app --host 0.0.0.0 --port 8000` and health path `/health`. Deploy the frontend with `npm ci`, `npm run build`, `npm start`.

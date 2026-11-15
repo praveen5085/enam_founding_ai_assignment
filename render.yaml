@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: finn-enam-praveen
+    runtime: docker
+    plan: free
+    region: singapore
+    branch: main
+    repo: https://github.com/praveen5085/enam_founding_ai_assignment
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    healthCheckPath: /health
+    autoDeployTrigger: commit
+    envVars:
+      - key: EXTRACTION_MODEL
+        value: gpt-4.1-mini
+      - key: SYNTHESIS_MODEL
+        value: gpt-4.1
