@@ -2,6 +2,8 @@
 
 [Live application](https://finn-enam-praveen.onrender.com) · [Public GitHub repository](https://github.com/praveen5085/enam_founding_ai_assignment)
 
+[AI build history](docs/ai-build-history/README.md) · [Build retrospective](docs/build-retrospective.md) · [Submission email](docs/cover-note.md)
+
 A mobile-first investment intelligence workbench for the ENAM Founding AI Engineer challenge. Feed joins prioritized filings and configurable market signals. Research compares guidance with reported delivery using primary documents. Network adds explicit relationship paths and contextual search.
 
 ## Run on Windows PowerShell

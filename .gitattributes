@@ -1,0 +1,2 @@
+# Keep the transcript checksum stable across Windows and Linux checkouts.
+docs/ai-build-history/* text eol=lf
